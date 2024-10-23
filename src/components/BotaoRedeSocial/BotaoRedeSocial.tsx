@@ -1,16 +1,16 @@
 import { IconType } from "react-icons";
 
 interface BotaoRedeSocialProps {
-    Icone: IconType; 
+    Icon: IconType; 
     url: string; 
     label: string; 
     iconSize?: string | number;
 }
 
-export const BotaoRedeSocial = ({ Icone, url, label,  iconSize = '2rem' }: BotaoRedeSocialProps)  => (
+export const BotaoRedeSocial = ({ Icon, url, label,  iconSize = '2rem' }: BotaoRedeSocialProps)  => (
     <div>
     <a href={url} target="_blank" rel="noopener noreferrer">
-        <Icone size={iconSize} />
+        <Icon size={iconSize} />
         {label}
     </a>
     </div>
