@@ -36,28 +36,28 @@ interface FormCadastroProps {
 
     return (
         <>
-        <h1>Cadastre-se:</h1>
+        <h1 className="flex justify-center ml-0 text-2xl mt-4">Cadastre-se:</h1>
         <form onSubmit={handleSubmit}>
-            <input 
+            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
             type="text" 
             placeholder="Nome Completo" 
             />
 
-            <input
+            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
             type="text"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             />
 
-            <input
+            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
             type="password"
             placeholder="Senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
 
-            <input
+            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
             type="password"
             placeholder="Confirme a senha"
             value={confirmPassword}
@@ -67,7 +67,7 @@ interface FormCadastroProps {
             <Botao type="submit">Cadastrar</Botao>
         </form>
 
-        <Link onClick={toggleForm} href={""}>
+        <Link className="flex justify-center text-center mt-4 cursor-pointer bg-blue-700 underline mt-8" onClick={toggleForm} href={""}>
             Já tem uma conta? Login
         </Link>
         </>
