@@ -7,7 +7,7 @@ interface FormCadastroProps {
     setUserData: (data: { email: string; password: string }) => void;
     }
 
-    const FormCadastro: React.FC<FormCadastroProps> = ({ toggleForm, setUserData }) => {
+    export const FormCadastro: React.FC<FormCadastroProps> = ({ toggleForm, setUserData }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -38,26 +38,26 @@ interface FormCadastroProps {
         <>
         <h1 className="flex justify-center ml-0 text-2xl mt-4">Cadastre-se:</h1>
         <form onSubmit={handleSubmit}>
-            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 focus:border-blue-500 focus:outline-none"
             type="text" 
             placeholder="Nome Completo" 
             />
 
-            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 focus:border-blue-500 focus:outline-none"
             type="text"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             />
 
-            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 focus:border-blue-500 focus:outline-none"
             type="password"
             placeholder="Senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
 
-            <input className="w-full p-3.5 pl-10 mb-4 border-gray-400 focus:outline-none border-blue-700"
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 focus:border-blue-500 focus:outline-none"
             type="password"
             placeholder="Confirme a senha"
             value={confirmPassword}
@@ -67,7 +67,7 @@ interface FormCadastroProps {
             <Botao type="submit">Cadastrar</Botao>
         </form>
 
-        <Link className="flex justify-center text-center mt-4 cursor-pointer bg-blue-700 underline mt-8" onClick={toggleForm} href={""}>
+        <Link className="flex justify-center text-center mt-8 cursor-pointer text-blue-500 underline" onClick={toggleForm} href={""}>
             Já tem uma conta? Login
         </Link>
         </>

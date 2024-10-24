@@ -8,7 +8,7 @@ interface FormLoginProps {
     handleLogin: (email: string, password: string) => void;
     }
 
-    const FormLogin: React.FC<FormLoginProps> = ({ toggleForm, handleLogin }) => {
+    export const FormLogin: React.FC<FormLoginProps> = ({ toggleForm, handleLogin }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -23,10 +23,10 @@ interface FormLoginProps {
 
         <form onSubmit={handleSubmit}>
             <div className="relative w-full mb-4">
-            <span className="absolute top-1/2 left-2.5 transform -translate-y-3/5">
+            <span className="absolute top-1/2 left-2.5 transform -translate-y-3/5 text-2xl bg-gray-400">
                 <BiUser size="1.5rem" color="#00a1fc" />
             </span>
-            <input
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 rounded-[4rem] text-base bg-white focus:border-blue-500 focus:outline-none"
                 type="text"
                 placeholder="     E-mail"
                 value={email}
@@ -35,10 +35,10 @@ interface FormLoginProps {
             </div>
 
             <div className="relative w-full mb-4">
-            <span>
+            <span className="absolute top-1/2 left-2.5 transform -translate-y-3/5 text-2xl bg-gray-400">
                 <FaLock size="1.5rem" color="#00a1fc" />
             </span>
-            <input
+            <input className="w-full p-3.5 pl-10 mb-4 border border-gray-400 rounded-[4rem] text-base bg-white focus:border-blue-500 focus:outline-none"
                 type="password"
                 placeholder="      Senha"
                 value={password}
@@ -51,9 +51,7 @@ interface FormLoginProps {
             </div>
         </form>
 
-        <Link onClick={toggleForm} href={""}>É novo aqui? Cadastre-se</Link>
+        <Link className="flex justify-center text-center mt-8 cursor-pointer text-blue-500 underline" onClick={toggleForm} href={""}>É novo aqui? Cadastre-se</Link>
         </>
     );
 };
-
-export default FormLogin;

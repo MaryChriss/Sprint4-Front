@@ -11,12 +11,12 @@ interface InputProps {
     textarea?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, required = false, placeholder = "", textarea = false }) => {
+export const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, required = false, placeholder = "", textarea = false }) => {
     return (
-        <div>
-            <label htmlFor={name}>{label}</label>
+        <div className="mt-4">
+            <label className="flex mb-1 mt-7 font-bold justify-center text-lg" htmlFor={name}>{label}</label>
             {textarea ? (
-                <textarea
+                <textarea className="w-96 h-60 rounded-3x2 p-2 focus:border-blue-500 focus:outline-none"
                     id={name}
                     name={name}
                     value={value}
@@ -25,7 +25,7 @@ const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, requi
                     placeholder={placeholder}
                 />
             ) : (
-                <input
+                <input className="w-96 rounded-3x2 border border-black text-base p-2 focus:border-blue-500 focus:outline-none"
                     id={name}
                     type={type}
                     name={name}
@@ -39,4 +39,3 @@ const Input: React.FC<InputProps> = ({ label, type, name, value, onChange, requi
     );
 };
 
-export default Input;

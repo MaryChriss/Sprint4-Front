@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import FormLogin from "../FormLogin/FormLogin";
-import FormCadastro from "../FormCadastro/FormCadastro";
+import { FormLogin } from "../FormLogin/FormLogin";
+import { FormCadastro } from "../FormCadastro/FormCadastro";
 
-const RightSection: React.FC = () => {
+export const RightSection: React.FC = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [userData, setUserData] = useState<{ email: string; password: string } | null>(null);
     const router = useRouter();
@@ -21,8 +21,8 @@ const RightSection: React.FC = () => {
     };
 
     return (
-        <div>
-        <div>
+        <div className="flex-1 flex justify-center">
+        <div className="bg-white p-8 rounded-3xl w-[35rem] h-[35rem]">
             {isLogin ? (
             <FormLogin toggleForm={toggleForm} handleLogin={handleLogin} />
             ) : (
