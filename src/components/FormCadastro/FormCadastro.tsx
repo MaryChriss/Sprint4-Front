@@ -73,5 +73,3 @@ interface FormCadastroProps {
         </>
     );
 };
-
-export default FormCadastro;

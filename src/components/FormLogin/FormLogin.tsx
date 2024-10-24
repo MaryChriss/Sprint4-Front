@@ -19,11 +19,11 @@ interface FormLoginProps {
 
     return (
         <>
-        <h1>Login:</h1>
+        <h1 className="flex justify-center ml-0 mb-20 text-3xl mt-8">Login:</h1>
 
         <form onSubmit={handleSubmit}>
-            <div>
-            <span>
+            <div className="relative w-full mb-4">
+            <span className="absolute top-1/2 left-2.5 transform -translate-y-3/5">
                 <BiUser size="1.5rem" color="#00a1fc" />
             </span>
             <input
@@ -34,7 +34,7 @@ interface FormLoginProps {
             />
             </div>
 
-            <div>
+            <div className="relative w-full mb-4">
             <span>
                 <FaLock size="1.5rem" color="#00a1fc" />
             </span>

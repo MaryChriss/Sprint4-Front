@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      translate: {
+        '3/5': '-60%',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
